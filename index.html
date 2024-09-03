@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Canvas Drawing (willReadFrequently)</title>
+
+	<style>
+		figure {
+			display: inline-block;
+			margin: 10px;
+			width: 500px;
+		}
+
+		.canvas-container {
+			border: 1px solid black;
+			position: relative;
+			width: 500px;
+			height: 500px;
+		}
+
+		canvas {
+			position: absolute;
+			touch-action: none;
+			transform-origin: 0 0;
+		}
+
+		figcaption {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Canvas Drawing (willReadFrequently)</h1>
+	<p><a href="https://github.com/hashory/canvas-drawing-willreadfrequently">Github Source Code</a></p>
+	<p>Browser-UserAgent: <span id="useragent"></span></p>
+	<p>Evaluate the performance of `willReadFrequently`</p>
+	<div>
+		<figure>
+			<div class="canvas-container">
+				<canvas id="canvas1" width="500" height="500"></canvas>
+			</div>
+			<figcaption>Canvas `willReadFrequently: true`</figcaption>
+		</figure>
+		<figure>
+			<div class="canvas-container">
+				<canvas id="canvas2" width="500" height="500"></canvas>
+			</div>
+			<figcaption>Canvas `willReadFrequently: false`</figcaption>
+		</figure>
+	</div>
+	<script>
+		document.getElementById('useragent').textContent = navigator.userAgent;
+	</script>
+	<script src="main.js" type="module"></script>
+</body>
+
+</html>
